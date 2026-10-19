@@ -1,0 +1,29 @@
+SoleEva/
+│
+├── index.html
+│
+├── css/
+│   ├── style.css
+│   ├── responsive.css
+│   ├── components.css
+│   └── animations.css
+│
+├── js/
+│   ├── script.js
+│   ├── navigation.js
+│   ├── products.js
+│   ├── cart.js
+│   ├── filters.js
+│   └── gallery.js
+│
+├── assets/
+│   ├── images/
+│   │   ├── products/
+│   │   ├── categories/
+│   │   ├── hero/
+│   │   ├── gallery/
+│   │   └── testimonials/
+│   │
+│   └── icons/
+│
+└── README.md

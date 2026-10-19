@@ -1,0 +1,248 @@
+/* Announcement Bar */
+
+.announcement-bar {
+    padding: 0.5rem;
+    background-color: var(--color-text);
+    color: var(--color-surface);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.announcement-bar span {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    background-color: var(--color-surface);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: var(--space-sm) var(--page-padding);
+}
+/* hamburger menu */
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-small);
+
+    font-size: 1.5rem;
+    color: var(--color-text);
+
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.menu-btn:hover {
+    color: var(--color-accent);
+}
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: opacity var(--transition-fast);
+}
+
+.logo:hover img {
+    opacity: 0.85;
+}
+
+/* Navigation */
+.nav-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    z-index: 100;
+}
+
+.nav-container.active {
+    display: block;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: var(--space-sm) var(--page-padding);
+    margin: 0;
+}
+
+.nav li a {
+    display: block;
+    padding: 1rem 0;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: color var(--transition-fast);
+}
+
+.nav li:last-child a {
+    border-bottom: none;
+}
+
+.nav li a:hover {
+    color: var(--color-accent);
+}
+
+/* Header Actions */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-left: auto;
+}
+
+.header-actions i{
+    font-size: 0.97rem;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.header-actions i:hover {
+    color: var(--color-accent);
+}
+
+/* Search input when clicked */
+.search-container {
+    position: relative;
+}
+
+.search-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.search-form {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: -70px;
+    width: min(280px, 85vw);
+    padding: 0.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    z-index: 10;
+}
+
+.search-container.active .search-form {
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.search-form button {
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+/* Account Dropdown */
+.account-container {
+    position: relative;
+}
+
+.account-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.account-toggle:hover {
+    color: var(--color-accent);
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: -40px;
+    min-width: 160px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 200;
+}
+
+.account-container.active .account-dropdown {
+    display: block;
+}
+
+.account-dropdown a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast);
+}
+
+.account-dropdown a:hover {
+    background-color: var(--color-background);
+    color: var(--color-accent);
+}

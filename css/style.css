@@ -1,0 +1,217 @@
+/* Mobile-First CSS */
+:root {
+    /* Colors */
+    --color-background: #F8F6F1;
+    --color-surface: #FFFFFF;
+    --color-text: #1D1D1B;
+    --color-text-muted: #77756F;
+    --color-accent: #B66A50;
+    --color-border: #E7E2D9;
+
+    /* Typography */
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+
+    /* Layout */
+    --container-width: 1200px;
+    --page-padding: 1rem;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+
+    /* Effects */
+    --transition-fast: 200ms ease;
+    --transition-smooth: 350ms ease;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+
+
+/* 4. LAYOUT UTILITIES */
+
+.container {
+    width: min(
+        100% - (var(--page-padding) * 2),
+        var(--container-width)
+    );
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--space-xl);
+}
+
+.section-title {
+    margin-bottom: var(--space-lg);
+}
+
+
+/* 5. BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+
+    padding: 0.8rem 1.5rem;
+
+    background-color: var(--color-text);
+    color: var(--color-surface);
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-small);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.btn:hover {
+    background-color: var(--color-accent);
+}
+
+.btn--outline {
+    background-color: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+.btn--outline:hover {
+    background-color: var(--color-text);
+    color: var(--color-surface);
+}
+
+
+/* 6. FORMS */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+
+    background-color: var(--color-surface);
+    color: var(--color-text);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+
+/* 7. ACCESSIBILITY */
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 1000;
+
+    padding: 0.75rem 1rem;
+    background-color: var(--color-text);
+    color: var(--color-surface);
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* 8. RESPONSIVE ADJUSTMENTS */
+
+/* Tablets and larger screens */
+@media (min-width: 768px) {
+    :root {
+        --page-padding: 1.5rem;
+    }
+
+    .section {
+        padding-block: var(--space-2xl);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    :root {
+        --page-padding: 2rem;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SoleEva | Footwear</title>
+
+    <style>
+        :root {
+            --color-background: #F8F6F1;
+            --color-surface: #FFFFFF;
+            --color-text: #1D1D1B;
+            --color-text-muted: #77756F;
+            --color-accent: #B66A50;
+            --color-border: #E7E2D9;
+
+            --font-heading: Georgia, serif;
+            --font-body: Arial, sans-serif;
+
+            --container-width: 1200px;
+
+            --radius-small: 6px;
+            --radius-medium: 12px;
+
+            --transition-fast: 200ms ease;
+            --transition-smooth: 350ms ease;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-body);
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin-inline: auto;
+        }
+
+        .hero {
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+        }
+
+        .hero p {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .product-card {
+            max-width: 320px;
+            padding: 24px;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-medium);
+        }
+
+        .product-card h2 {
+            font-family: var(--font-heading);
+        }
+
+        .shop-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: var(--radius-small);
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+
+        .shop-button:hover {
+            background-color: var(--color-text);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Find Your Next Favourite Pair.</h1>
+
+            <p>
+                Discover footwear that combines comfort,
+                quality, and timeless style.
+            </p>
+
+            <article class="product-card">
+                <h2>Classic Leather Sneakers</h2>
+
+                <p>Clean design. Everyday comfort.</p>
+
+                <button class="shop-button">
+                    Shop Collection
+                </button>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

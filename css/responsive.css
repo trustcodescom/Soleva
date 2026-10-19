@@ -1,0 +1,64 @@
+/* ========================================
+   TABLET AND DESKTOP
+======================================== */
+
+@media (min-width: 768px) {
+    .header .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-md);
+    }
+
+    .header .menu-btn {
+        display: none;
+    }
+
+    .header .nav-container {
+        display: block;
+        position: static;
+        width: auto;
+        margin-left: 0;
+        border-top: none;
+        background: transparent;
+    }
+
+    .header .nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-md);
+        padding: 0;
+    }
+
+    .header .nav li a {
+        padding: 0.5rem 0;
+        border-bottom: none;
+    }
+
+    .header .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        margin-left: 0;
+    }
+    .header-actions i{
+        font-size: 1rem;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .header .header-actions {
+        gap: var(--space-md);
+    }
+    .header-actions i{
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    /* Desktop styles */
+}

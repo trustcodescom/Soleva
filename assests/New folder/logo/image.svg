@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 180">
+
+    <style>
+        .wordmark {
+            fill: #B66A50;
+            font-family: Georgia, serif;
+            font-size: 79px;
+            letter-spacing: 4px;
+        }
+
+        .tagline {
+            fill: #B66A50;
+            font-family: Arial, sans-serif;
+            font-size: 21px;
+            letter-spacing: 2px;
+        }
+    </style>
+
+    <text x="250" y="100"
+          text-anchor="middle"
+          class="wordmark">SOLEVA</text>
+
+    <text x="250" y="140"
+          text-anchor="middle"
+          class="tagline">STEP INTO YOUR STYLE</text>
+
+</svg>
