@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 
     <style>
         :root {
-            --color-background: #F8F6F1;
+            --color-background: #d183694d;
             --color-surface: #FFFFFF;
             --color-text: #1D1D1B;
             --color-text-muted: #77756F;
@@ -19,6 +20,13 @@
             --font-body: Arial, sans-serif;
 
             --container-width: 1200px;
+            --page-padding: 1rem;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
 
             --radius-small: 6px;
             --radius-medium: 12px;
@@ -26,6 +34,10 @@
             --transition-fast: 200ms ease;
             --transition-smooth: 350ms ease;
         }
+
+        /* ==========================
+           GLOBAL STYLES
+        ========================== */
 
         * {
             box-sizing: border-box;
@@ -38,76 +50,240 @@
             font-family: var(--font-body);
         }
 
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button {
+            font: inherit;
+        }
+
         .container {
-            width: 90%;
+            width: 100%;
             max-width: var(--container-width);
             margin-inline: auto;
         }
+/* ==========================
+   HERO SECTION
+   Mobile First
+========================== */
 
-        .hero {
-            padding: 80px 0;
-        }
+.hero {
+    width: 100%;
+}
 
-        .hero h1 {
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-        }
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 
-        .hero p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-        }
+    width: 100%;
+    
+    padding: var(--space-lg) var(--page-padding);
 
-        .product-card {
-            max-width: 320px;
-            padding: 24px;
-            background-color: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-medium);
-        }
+    background-color: var(--color-background);
+}
 
-        .product-card h2 {
-            font-family: var(--font-heading);
-        }
+/* ==========================
+   HERO IMAGE
+========================== */
 
-        .shop-button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: var(--radius-small);
-            background-color: var(--color-accent);
-            color: var(--color-surface);
-            cursor: pointer;
-            transition: background-color var(--transition-fast);
-        }
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-border);
+}
 
-        .shop-button:hover {
-            background-color: var(--color-text);
-        }
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 1;
+    transition: opacity 600ms ease;
+}
+
+.hero-image img.is-changing {
+    opacity: 0;
+}
+
+/* ==========================
+   HERO CONTENT
+========================== */
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-subtitle {
+    margin: 0 0 var(--space-xs);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    margin: 0 0 var(--space-sm);
+
+    font-family: var(--font-body);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.hero-description {
+    max-width: 35ch;
+    margin: 0 0 var(--space-md);
+
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* ==========================
+   HERO BUTTONS
+========================== */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+
+    min-height: 40px;
+    padding: 0.65rem 1rem;
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-small);
+
+    font-size: 0.75rem;
+    text-decoration: none;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.btn-secondary {
+    border-color: var(--color-text);
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-text);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text);
+    color: var(--color-surface);
+}
     </style>
 </head>
 
 <body>
 
     <main class="container">
-        <section class="hero">
-            <h1>Find Your Next Favourite Pair.</h1>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-container">
+        <!-- Hero Image -->
+        <div class="hero-image">
+            <img
+                id="hero-image"
+                src="assets/images/hero_1.jpg"
+                alt="Stylish sneakers from the Soleva collection"
+            >
+        </div>
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <p class="hero-subtitle">Step Into Your Style</p>
 
-            <p>
-                Discover footwear that combines comfort,
-                quality, and timeless style.
+            <h1>
+                Quality Shoes
+                <br>
+                for Every Step
+            </h1>
+
+            <p class="hero-description">
+                Discover premium footwear from trusted brands
+                for comfort, style and confidence, all in one place.
             </p>
 
-            <article class="product-card">
-                <h2>Classic Leather Sneakers</h2>
-
-                <p>Clean design. Everyday comfort.</p>
-
-                <button class="shop-button">
-                    Shop Collection
-                </button>
-            </article>
-        </section>
+            <div class="hero-buttons">
+                <a href="shop.html" class="btn btn-primary">
+                    Shop Collection <span>&rarr;</span>
+                </a>
+                <a href="shop.html" class="btn btn-secondary">
+                    Explore Categories
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
+    <script>
+        const heroImage = document.querySelector("#hero-image");
+
+const heroImages = [
+    "assets/images/hero_1.jpg",
+    "assets/images/hero_2.jpg",
+    "assets/images/hero_3.jpg",
+    "assets/images/hero_4.jpg"
+];
+
+let currentImage = 0;
+
+function changeHeroImage() {
+    const nextImage = (currentImage + 1) % heroImages.length;
+    const imageToLoad = new Image();
+
+    imageToLoad.onload = () => {
+        heroImage.classList.add("is-changing");
+
+        setTimeout(() => {
+            heroImage.src = heroImages[nextImage];
+            currentImage = nextImage;
+
+            heroImage.classList.remove("is-changing");
+        }, 600);
+    };
+
+    imageToLoad.onerror = () => {
+        console.error("Unable to load hero image:", heroImages[nextImage]);
+    };
+
+    imageToLoad.src = heroImages[nextImage];
+}
+
+setInterval(changeHeroImage, 5000);
+    </script>
 </body>
+
 </html>

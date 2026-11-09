@@ -1,10 +1,10 @@
 /* Mobile-First CSS */
 :root {
     /* Colors */
-    --color-background: #F8F6F1;
+    --color-background: #b66a5036;
     --color-surface: #FFFFFF;
     --color-text: #1D1D1B;
-    --color-text-muted: #77756F;
+    --color-text-muted: #757471;
     --color-accent: #B66A50;
     --color-border: #E7E2D9;
 
@@ -14,7 +14,10 @@
 
     /* Layout */
     --container-width: 1200px;
-    --page-padding: 1rem;
+    --page-padding-sm: 1rem;
+    --page-padding-md: 1.5rem;
+    --page-padding-lg: 2rem;
+    --page-padding-xl: 2.5rem;
 
     /* Spacing */
     --space-xs: 0.5rem;

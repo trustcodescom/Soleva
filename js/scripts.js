@@ -1,14 +1,35 @@
-// Navigation search toggle
-const searchContainer = document.querySelector(".search-container");
-const searchToggle = document.querySelector(".search-toggle");
-const searchInput = document.querySelector(".search-input");
+// hero image slider
+const heroImage = document.querySelector("#hero-image");
 
-searchToggle.addEventListener("click", () => {
-    const isOpen = searchContainer.classList.toggle("active");
+const heroImages = [
+    "assets/images/hero_1.jpg",
+    "assets/images/hero_2.jpg",
+    "assets/images/hero_3.jpg",
+    "assets/images/hero_4.jpg"
+];
 
-    searchToggle.setAttribute("aria-expanded", isOpen);
+let currentImage = 0;
 
-    if (isOpen) {
-        searchInput.focus();
-    }
-});
+function changeHeroImage() {
+    const nextImage = (currentImage + 1) % heroImages.length;
+    const imageToLoad = new Image();
+
+    imageToLoad.onload = () => {
+        heroImage.classList.add("is-changing");
+
+        setTimeout(() => {
+            heroImage.src = heroImages[nextImage];
+            currentImage = nextImage;
+
+            heroImage.classList.remove("is-changing");
+        }, 600);
+    };
+
+    imageToLoad.onerror = () => {
+        console.error("Unable to load hero image:", heroImages[nextImage]);
+    };
+
+    imageToLoad.src = heroImages[nextImage];
+}
+
+setInterval(changeHeroImage, 5000);
