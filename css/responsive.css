@@ -73,6 +73,34 @@
         padding: 0.85rem 1.385rem;
         font-size: 1rem;
     }
+
+
+     .categories-section {
+        padding-top: var(--space-lg);
+    }
+
+    .section-heading > p:first-child{
+        text-align: left;
+        margin:0;
+        margin-left: var(--space-lg);
+        font-size: 0.875rem;
+    }
+    .section-heading {
+        margin-bottom: var(--space-lg);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .category-info {
+        padding: 1.25rem;
+    }
+
+    .category-card{
+        aspect-ratio: 2 / 1;
+    }
 }
 
 /* Laptop */
@@ -83,13 +111,6 @@
     .header-actions i{
         font-size: 1.2rem;
     }
-    .hero{
-        max-width: 1200px;
-        margin-inline: auto;
-        /* padding-bottom: 250px; */
-        background-color: transparent;
-        /* border-bottom: 3px solid #0c0c0c85; */
-    }
     .hero-container{
         flex-direction: row-reverse;
         gap: var(--space-xs);
@@ -98,6 +119,7 @@
         height: 500px;
         /* border:1px solid red; */
         padding: var(--space-sm) var(--page-padding-md);
+         /* background-color: transparent; */
     }
     .hero-image img{
         border-radius: 9rem 0 5rem 0;
@@ -114,18 +136,22 @@
         font-size: 1.3rem;
         padding-bottom: 3rem;
     }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        padding: var(--space-md) var(--page-padding-lg);
+    }
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
     /* Desktop styles */
-    .hero{
+    .hero-container{
         max-width: 1400px;
         margin-inline: auto;
         padding-bottom: 0;
-        background-color: transparent;
     }
-
     .hero-image img{
         border-radius: 11rem 0 7rem 0;
     }
@@ -137,4 +163,29 @@
         font-size: 1.4rem;
         padding-bottom: 4rem;
     }
+
+    /* =========================
+        SHOP BY CATEGORY
+    ========================= */
+    .categories-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+        padding: var(--space-sm) var(--page-padding-xl);
+    }
+
+    .category-card {
+        aspect-ratio: 3 / 2;
+    }
+
+    .categories-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
+
+
+
+
+/* =========================
+   SHOP BY CATEGORY
+========================= */

@@ -7,6 +7,12 @@
     --color-text-muted: #757471;
     --color-accent: #B66A50;
     --color-border: #E7E2D9;
+    --color-hero-section: linear-gradient(
+        135deg,
+        #f5c0a1 0%,
+        #e2d7c7 50%,
+        #e9c0b4 100%
+    );
 
     /* Typography */
     --font-heading: Georgia, serif;
@@ -24,6 +30,10 @@
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    --radius-small: 6px;
+    --radius-medium: 12px;
 
     /* Effects */
     --transition-fast: 200ms ease;

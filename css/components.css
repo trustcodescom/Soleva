@@ -220,7 +220,7 @@
     display: none;
     position: absolute;
     top: calc(100% + 0.75rem);
-    right: -40px;
+    right: -30px;
     min-width: 160px;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -254,7 +254,7 @@
 .hero {
     width: 100%;
     min-height: auto;
-    background-color: var(--color-background);
+    background: var(--color-hero-section);
     padding-bottom: 50px;
 }
 
@@ -264,16 +264,12 @@
     gap: var(--space-md);
 
     width: 100%;
-
-    /* background-color: var(--color-background); */
 }
 .hero-image {
     position: relative;
     width: 100%;
     height: 320px;
     overflow: hidden;
-    border-radius: var(--radius-medium);
-    background-color: var(--color-border);
 }
 .hero-image img {
     display: block;
@@ -295,21 +291,26 @@
 }
 
 .hero-subtitle {
+    width: fit-content;
     margin: 0 0 var(--space-xs);
 
     font-size: 0.875rem;
     font-weight: 600;
+    font-family: var(--font-heading);
+    font-style:italic;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-accent);
+
+    border-bottom: 3px double var(--color-accent);
 }
 
 .hero-content h1 {
     margin: 0 0 var(--space-sm);
 
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.04em;
 
@@ -322,6 +323,8 @@
 
     color: var(--color-text-muted);
     font-size: 0.886rem;
+    font-family: var(--font-heading);
+    font-style:italic;
     line-height: 1.5;
 }
 
@@ -370,4 +373,153 @@
 .btn-secondary:hover {
     background-color: var(--color-text);
     color: var(--color-surface);
+}
+
+
+
+
+
+/* =========================
+   SHOP BY CATEGORY
+========================= */
+
+.categories-section {
+    width: 100%;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-lg);
+    background-color: var(--color-background);
+}
+
+/* Section heading */
+
+.section-heading {
+    margin-bottom: var(--space-sm);
+    text-align: center;
+}
+
+.section-heading > p:first-child {
+    width: fit-content;
+
+    margin: 0 auto;
+    margin-bottom: var(--space-xs);
+
+    color: var(--color-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-style:italic;
+    letter-spacing: 0.15em;
+
+    
+    border-bottom: 3px double var(--color-accent);
+
+}
+
+.section-heading h2 {
+    /* margin-bottom: var(--space-xs); */
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 500;
+}
+
+.section-heading > p:last-child {
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 0.4rem;
+
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Category grid */
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: var(--space-sm) var(--page-padding-sm);
+}
+
+/* Category card */
+
+.category-card {
+    position: relative;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    aspect-ratio: 2 / 1;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-border);
+    text-decoration: none;
+}
+
+/* Category image */
+
+.category-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-smooth);
+}
+
+/* Dark gradient behind text */
+
+.category-card::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.15) 45%,
+        transparent 75%
+    );
+    pointer-events: none;
+}
+
+/* Category information */
+
+.category-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.category-info h3 {
+    color: var(--color-surface);
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 400;
+}
+
+.category-info span {
+    flex-shrink: 0;
+    color: var(--color-surface);
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+
+.category-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Keyboard accessibility */
+
+.category-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
 }
