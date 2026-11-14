@@ -142,12 +142,21 @@
                 <div class="hero-container">
                     <!-- Hero Image -->
                     <div class="hero-image">
-                        <img
-                            id="hero-image"
-                            src="assets/images/hero_1.jpg"
-                            alt="Stylish sneakers from the Soleva collection"
-                            loading="lazy"
-                        >
+                        <picture>
+                            <source
+                                id="hero-webp"
+                                srcset="assets/images/hero_1.webp"
+                                type="image/webp"
+                            >
+
+                            <img
+                                id="hero-image"
+                                src="assets/images/hero_1.jpg"
+                                alt="Stylish sneakers from the Soleva collection"
+                                fetchpriority="high"
+                                decoding="async"
+                            >
+                        </picture>
                     </div>
                     <!-- Hero Content -->
                     <div class="hero-content">
@@ -252,6 +261,224 @@
                                 <h3>Sneakers</h3>
                                 <span>Explore &rarr;</span>
                             </div>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="featured-products">
+                <div class="container">
+
+                    <!-- Section Heading -->
+                    <div class="section-heading">
+                        <p>CURATED FOR YOU</p>
+                        <h2>Featured Products</h2>
+                        <p>Discover styles worth stepping into.</p>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid">
+
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_1.jpg"
+                                    alt="Classic sneakers">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Sneakers</p>
+                                <h3>Classic Everyday Sneakers</h3>
+                                <p class="product-price">₦45,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_2.jpg"
+                                    alt="Casual leather shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Casual Shoes</p>
+                                <h3>Premium Leather Shoes</h3>
+                                <p class="product-price">₦55,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_3.jpg"
+                                    alt="Formal shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Formal Shoes</p>
+                                <h3>Elegant Formal Shoes</h3>
+                                <p class="product-price">₦65,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_4.jpg"
+                                    alt="Sport running shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Sports Shoes</p>
+                                <h3>Active Running Shoes</h3>
+                                <p class="product-price">₦50,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_1.jpg"
+                                    alt="Classic sneakers">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Sneakers</p>
+                                <h3>Classic Everyday Sneakers</h3>
+                                <p class="product-price">₦45,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_2.jpg"
+                                    alt="Casual leather shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Casual Shoes</p>
+                                <h3>Premium Leather Shoes</h3>
+                                <p class="product-price">₦55,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_3.jpg"
+                                    alt="Formal shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Formal Shoes</p>
+                                <h3>Elegant Formal Shoes</h3>
+                                <p class="product-price">₦65,000</p>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/images/hero_4.jpg"
+                                    alt="Sport running shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Sports Shoes</p>
+                                <h3>Active Running Shoes</h3>
+                                <p class="product-price">₦50,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="promo-banner">
+                <div class="container">
+                    <div class="promo-content">
+                        <p class="promo-label">SOLEVA SPECIAL OFFER</p>
+
+                        <h2>Step Into Something Better.</h2>
+
+                        <p class="promo-description">
+                            Discover your next favourite pair and give your everyday style a fresh look.
+                        </p>
+
+                        <a href="shop.html" class="promo-btn">Shop Collection</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="new-arrivals">
+                <div class="container">
+
+                    <div class="section-heading">
+                        <p>JUST LANDED</p>
+                        <h2>New Arrivals</h2>
+                        <p>Explore the latest additions to our collection.</p>
+                    </div>
+
+                    <div class="products-grid" id="new-arrivals-grid">
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">NEW</span>
+                                <img src="assets/images/hero_1.webp" alt="New sneakers">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Sneakers</p>
+                                <h3>Classic Everyday Sneakers</h3>
+                                <p class="product-price">₦45,000</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">NEW</span>
+                                <img src="assets/images/hero_2.webp" alt="Casual footwear">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Casual</p>
+                                <h3>Premium Casual Shoes</h3>
+                                <p class="product-price">₦38,000</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">NEW</span>
+                                <img src="assets/images/hero_3.jpg" alt="Leather shoes">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Formal</p>
+                                <h3>Classic Leather Shoes</h3>
+                                <p class="product-price">₦55,000</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">NEW</span>
+                                <img src="assets/images/hero_4.jpg" alt="Sport sneakers">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="product-category">Sportswear</p>
+                                <h3>Lightweight Sport Sneakers</h3>
+                                <p class="product-price">₦42,000</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="new-arrivals-action">
+                        <a href="shop.html" class="view-all-btn">
+                            View All Products
                         </a>
                     </div>
 

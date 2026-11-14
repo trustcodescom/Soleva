@@ -101,6 +101,17 @@
     .category-card{
         aspect-ratio: 2 / 1;
     }
+
+        .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+    .featured-products .container {
+        max-width: 900px;
+    }
+        .product-image{
+        aspect-ratio: 3 / 2;
+    }
 }
 
 /* Laptop */
@@ -142,6 +153,10 @@
         gap: 1.25rem;
         padding: var(--space-md) var(--page-padding-lg);
     }
+
+        .featured-products .container {
+        max-width: 1090px;
+    }
 }
 
 /* Desktop */
@@ -181,11 +196,17 @@
         max-width: 1400px;
         margin: 0 auto;
     }
+
+
+        .products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+    .featured-products .container {
+        max-width: 1200px;
+    }
 }
 
 
 
 
-/* =========================
-   SHOP BY CATEGORY
-========================= */

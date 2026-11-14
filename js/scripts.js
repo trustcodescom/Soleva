@@ -1,11 +1,24 @@
 // hero image slider
 const heroImage = document.querySelector("#hero-image");
+const heroWebp = document.querySelector("#hero-webp");
 
 const heroImages = [
-    "assets/images/hero_1.jpg",
-    "assets/images/hero_2.jpg",
-    "assets/images/hero_3.jpg",
-    "assets/images/hero_4.jpg"
+    {
+        jpg: "assets/images/hero_1.jpg",
+        webp: "assets/images/hero_1.webp"
+    },
+    {
+        jpg: "assets/images/hero_2.jpg",
+        webp: "assets/images/hero_2.webp"
+    },
+    {
+        jpg: "assets/images/hero_3.jpg",
+        webp: "assets/images/hero_3.webp"
+    },
+    {
+        jpg: "assets/images/hero_4.jpg",
+        webp: "assets/images/hero_4.webp"
+    }
 ];
 
 let currentImage = 0;
@@ -18,7 +31,9 @@ function changeHeroImage() {
         heroImage.classList.add("is-changing");
 
         setTimeout(() => {
-            heroImage.src = heroImages[nextImage];
+            heroWebp.srcset = heroImages[nextImage].webp;
+            heroImage.src = heroImages[nextImage].jpg;
+
             currentImage = nextImage;
 
             heroImage.classList.remove("is-changing");
@@ -26,10 +41,10 @@ function changeHeroImage() {
     };
 
     imageToLoad.onerror = () => {
-        console.error("Unable to load hero image:", heroImages[nextImage]);
+        console.error("Unable to load hero image:", heroImages[nextImage].jpg);
     };
 
-    imageToLoad.src = heroImages[nextImage];
+    imageToLoad.src = heroImages[nextImage].webp;
 }
 
 setInterval(changeHeroImage, 5000);
