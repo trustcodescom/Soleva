@@ -810,3 +810,321 @@ and (max-height: 700px) {
     font-size: 0.8rem;
     line-height: 1.6;
 }
+
+
+
+/* testimonials */
+.testimonials-section {
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    background-color: var(--color-background);
+}
+
+.testimonials-section .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+}
+
+.testimonials-container::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: rgba(182, 106, 80, 0.12);
+    color: var(--color-accent);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.testimonial-author h3 {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.testimonial-author span {
+    color: var(--color-text-muted);
+    font-size: 0.7rem;
+}
+
+
+/* newsletter */
+.newsletter-section {
+    width: 100%;
+    padding: 3rem 1.5rem;
+    background-color: var(--color-text);
+}
+
+.newsletter-section .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+.newsletter-section {
+    width: 100%;
+    padding: 3rem 1.5rem;
+    background-image: url("../assets/images/hero_3.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+
+.newsletter-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.822);
+    z-index: -1;
+}
+/* .newsletter-section .section-heading {
+    max-width: 550px;
+    margin: 0 auto var(--space-lg);
+} */
+
+.newsletter-section .section-heading h2 {
+    color: var(--color-surface);
+}
+
+.newsletter-section .section-heading > p:last-child {
+    color: rgba(255, 255, 255, .7);
+}
+
+.newsletter-form {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: .9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: .85rem;
+    outline: none;
+}
+
+.newsletter-form input:focus {
+    border-color: var(--color-accent);
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: .9rem 1rem;
+    border: none;
+    border-radius: var(--radius-small);
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.newsletter-form button:hover {
+    background-color: #98543f;
+}
+
+
+/* footer */
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    padding: 3rem 1.5rem 1.5rem;
+    background: var(--color-footer);
+}
+
+.footer .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* BRAND */
+
+.footer-brand {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-surface);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-decoration: none;
+}
+
+.footer-brand p {
+    max-width: 320px;
+    color: rgba(255, 255, 255, .65);
+    font-size: .85rem;
+    line-height: 1.7;
+}
+
+/* FOOTER LINKS */
+
+.footer-links {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.footer-links h3,
+.footer-social h3 {
+    margin-bottom: 1rem;
+    color: var(--color-surface);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    list-style: none;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, .65);
+    font-size: .85rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+/* SOCIAL MEDIA */
+
+.footer-social {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    color: var(--color-surface);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.social-icons a:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom p,
+.footer-legal a {
+    color: rgba(255, 255, 255, .55);
+    font-size: .75rem;
+}
+.footer-bottom a {
+    color: #F8F6F1;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+    opacity: .75;
+}
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-legal a:hover {
+    color: var(--color-accent);
+}
