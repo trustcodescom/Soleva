@@ -52,10 +52,18 @@
         <!-- ==========================================
             CSS Files
         =========================================== -->
+
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/contact.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="stylesheet" href="css/responsive.css">
+
+        <!-- AOS Animation -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        >
 
     </head>
 
@@ -137,14 +145,197 @@
         </header>
 
         <main>
-            <section class="about-section">
-                <div class="container">
-                    <h1 class="section-title">This Page Is Under Construction!!!</h1>
+            <section class="contact-hero">
+                <div class="contact-hero-image">
+                    <img
+                        src="assets/images/hero_2.webp"
+                        alt="Soleva footwear collection"
+                    >
+                </div>
+
+                <div class="contact-hero-overlay"></div>
+
+                <div class="contact-hero-content" data-aos="fade-up"s>
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you.</p>
+                </div>
+            </section>
+
+            <section class="contact-info">
+                <div class="section-heading" data-aos="fade-left">
+                    <p>WE'RE HERE TO HELP</p>
+                    <h2>Get in Touch</h2>
+                    <span>Have a question? We'd love to hear from you.</span>
+                </div>
+
+                <div class="contact-info-grid">
+
+                    <div class="contact-info-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="contact-info-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>Send us an email and we'll get back to you.</p>
+                        <a href="mailto:your-email@example.com">
+                            your-email@example.com
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Speak directly with our customer support team.</p>
+                        <a href="tel:+234XXXXXXXXXX">
+                            +234 XXX XXX XXXX
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>We're happy to connect with you.</p>
+                        <span>Add your business location</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <div class="contact-form-intro" data-aos="fade-right">
+                    <p>LET'S TALK</p>
+                    <h2>Send Us a Message</h2>
+                    <span>
+                        Have a question, suggestion or need assistance?
+                        Fill out the form and we'll be happy to hear from you.
+                    </span>
+                </div>
+
+                <form class="contact-form" id="contact-form" data-aos="fade-left">
+
+                    <div class="form-group">
+                        <input type="text" id="full-name" name="fullName"
+                            placeholder=" " required>
+                        <label for="full-name">Full Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email"
+                            placeholder=" " required>
+                        <label for="email">Email Address</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject"
+                            placeholder=" " required>
+                        <label for="subject">Subject</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5"
+                            placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+
+                </form>
+            </section>
+            <section class="faq-section">
+                <div class="section-heading" data-aos="fade-up">
+                    <p>NEED SOME HELP?</p>
+                    <h2>Frequently Asked Questions</h2>
+                    <span>Find answers to some of our most common questions.</span>
+                </div>
+
+                <div class="faq-container">
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How can I place an order?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Browse our collection, select your preferred footwear and add it to your cart. Follow the checkout steps to complete your order.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What payment methods do you accept?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We aim to provide convenient and secure payment options. Available methods will be displayed during checkout.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How long does delivery take?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Delivery times depend on your location. You'll receive more information about your delivery during checkout.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I return or exchange an item?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our return and exchange policy will provide details about eligibility, conditions and the steps to follow.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How can I contact customer support?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can reach us through the contact form or the contact details provided above.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="contact-social">
+                <div class="section-heading" data-aos="fade-up">
+                    <p>STAY CONNECTED</p>
+                    <h2>Follow Soleva</h2>
+                    <span>Discover our latest styles, collections and updates.</span>
+                </div>
+
+                <div class="social-links" data-aos="zoom-in">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
                 </div>
             </section>
         </main>
 
-                <footer class="footer">
+        <footer class="footer">
             <div class="container">
 
                 <!-- Brand -->
@@ -220,7 +411,9 @@
         </footer>
 
         
-        <script type="module" src="js/scripts.js"></script>
         <script src="js/navigation.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="module" src="js/script.js"></script>
+
     </body>
 </html>

@@ -281,6 +281,82 @@
         width: 70%;
         margin-inline: auto;
     }
+
+    /* Contact Us Page */
+    .contact-info {
+        padding: 4rem 2rem;
+    }
+
+    .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+    .contact-info-grid > :last-child {
+        grid-column: 1 / -1;
+        width: 70%;
+        margin-inline: auto;
+    }
+
+    /* contact-form */
+     .contact-form-section {
+        display: grid;
+        grid-template-columns: .8fr 1.2fr;
+        align-items: start;
+        gap: 2rem;
+        padding: 4rem 2rem;
+    }
+
+    .contact-form-intro {
+        margin-bottom: 0;
+    }
+
+
+    .faq-section {
+        padding: 4rem 2rem;
+    }
+
+    .faq-section .section-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .faq-container {
+        max-width: 800px;
+        margin-inline: auto;
+        gap: 1rem;
+    }
+
+    .faq-item {
+        padding-inline: 1.5rem;
+    }
+
+    .faq-question {
+        padding: 1.4rem 0;
+        font-size: .95rem;
+    }
+
+    .faq-answer p {
+        font-size: .85rem;
+    }
+
+
+    .contact-social {
+        padding: 4rem 2rem;
+    }
+
+    .contact-social .section-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .social-links {
+        gap: 1.3rem;
+    }
+
+    .social-links a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
 }
 
 /* Laptop */
@@ -469,13 +545,15 @@
     }
 
     /* ===== about_us Page ===== */
-    .about-hero-content h1 {
+    .about-hero-content h1,
+    .contact-hero-content h1 {
         margin-bottom: .3rem;
         font-size: 2.5rem;
         font-weight: 500;
     }
 
-    .about-hero-content p {
+    .about-hero-content p,
+    .contact-hero-content p {
         color: rgba(255, 255, 255, .8);
         font-size: 1.2rem;
         line-height: 1.7;
@@ -535,6 +613,84 @@
         grid-column: auto;
         width: auto;
         margin-inline: 0;
+    }
+
+    /* Contact Us Page */
+   .contact-info {
+        padding: 5rem 2rem;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    .contact-info-card {
+        padding: 2rem;
+    }
+
+    .contact-info-grid > :last-child {
+        grid-column: auto;
+        width: auto;
+        margin-inline: 0;
+    }
+
+    .contact-form-section {
+        gap: 5rem;
+        padding: 5rem 3rem;
+    }
+
+    .contact-form-intro h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        max-width: 650px;
+    }
+
+    .faq-section {
+        padding: 5rem 2rem;
+    }
+
+    .faq-section .section-heading {
+        margin-bottom: 3rem;
+    }
+
+    .faq-container {
+        max-width: 850px;
+        gap: 1.2rem;
+    }
+
+    .faq-item {
+        padding-inline: 1.8rem;
+    }
+
+    .faq-question {
+        padding: 1.5rem 0;
+        font-size: 1rem;
+    }
+
+    .faq-answer p {
+        font-size: .9rem;
+    }
+
+
+    .contact-social {
+        padding: 5rem 2rem;
+    }
+
+    .contact-social .section-heading {
+        margin-bottom: 3rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-links a {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
     }
 }
 
