@@ -39,6 +39,8 @@
     /* Effects */
     --transition-fast: 200ms ease;
     --transition-smooth: 350ms ease;
+
+    --box--shadow: 3px 3px 6px rgba(0, 0, 0, 0.233);
 }
 
 /* Reset */

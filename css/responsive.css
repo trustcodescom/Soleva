@@ -131,7 +131,7 @@
         margin:0;
         margin-left: var(--space-ms);
     }
-
+/* FEATURES */
     .features-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.5rem;
@@ -155,7 +155,7 @@
     .feature-card p {
         font-size: 0.9rem;
     }
-
+/* TESTIMONIALS */
     .testimonials-section {
         padding: 3.5rem 2rem;
     }
@@ -172,7 +172,7 @@
     .testimonial-text {
         font-size: 1rem;
     }
-
+/* NEWSLETTER */
     .newsletter-section {
         padding: 3rem 1rem;
     }
@@ -205,7 +205,7 @@
         max-width: 450px;
         margin: 0;
     }
-
+    /* FOOTER */
     .footer {
         padding: 4rem 2rem 2rem;
     }
@@ -236,25 +236,50 @@
         padding-top: 2rem;
     }
 
-    .about-hero {
-        display: flex;
-        align-items: center;
+
+    /* ===== about_us Page ===== */
+    .about-story {
+        display: grid;
+        grid-template-columns: .8fr 1fr 1fr;
+        align-items: start;
         gap: 2rem;
         padding: 4rem 2rem;
     }
 
-    .about-hero-content {
-        flex: 1;
-        margin-bottom: 0;
+    .about-story-content {
+        gap: 1rem;
     }
 
-    .about-hero-content h1 {
-        font-size: 2.5rem;
+    /* SOLEVA DIFFERENCE */
+    .soleva-difference {
+        padding: 4rem 2rem;
     }
 
-    .about-hero-image {
-        flex: 1;
-        height: 380px;
+    .difference-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .difference-card p {
+        max-width: 250px;
+        font-size: .85rem;
+    }
+
+    /* OUR VALUES */
+    .about-values {
+        padding: 4rem 2rem;
+    }
+
+    .values-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .values-container > :last-child  {
+        grid-column: 1 / -1;
+        width: 70%;
+        margin-inline: auto;
     }
 }
 
@@ -307,6 +332,19 @@
     .featured-products .container {
         max-width: 1090px;
     }
+
+    /* SOLEVA DIFFERENCE */
+    .difference-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+    .difference-grid > :last-child  {
+        grid-column: 1 / -1;
+        width: 60%;
+        margin-inline: auto;
+    }
+
+    
 }
 
 /* Desktop Styles */
@@ -428,6 +466,75 @@
         margin-top: 3rem;
         padding-top: 1.5rem;
         border-top: 1px solid rgba(231, 226, 217, 0.2);
+    }
+
+    /* ===== about_us Page ===== */
+    .about-hero-content h1 {
+        margin-bottom: .3rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .about-hero-content p {
+        color: rgba(255, 255, 255, .8);
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+
+    .about-story {
+        gap: 3rem;
+        padding: 5rem 2rem;
+    }
+
+    .about-story-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-story-content p,
+    .about-story-highlight p {
+        font-size: .9rem;
+    }
+
+    /* SOLEVA DIFFERENCE */
+    .soleva-difference {
+        padding: 5rem 2rem;
+    }
+
+    .difference-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2rem;
+    }
+    .difference-grid > :last-child {
+        grid-column: auto;
+        width: auto;
+        margin-inline: 0;
+    }
+    .difference-icon {
+        font-size: 1.6rem;
+    }
+
+    .difference-card h3 {
+        font-size: 1.15rem;
+    }
+
+    /* OUR VALUES */
+    .about-values {
+        padding: 5rem 2rem;
+    }
+
+    .values-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+
+    .values-container > :last-child  {
+        grid-column: auto;
+        width: auto;
+        margin-inline: 0;
     }
 }
 
