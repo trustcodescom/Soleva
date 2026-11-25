@@ -4,9 +4,12 @@
 
 [data-animate] {
     opacity: 0;
+
     transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+        opacity var(--animation-duration, 800ms) ease,
+        transform var(--animation-duration, 800ms) ease;
+
+    transition-delay: var(--animation-delay, 0ms);
 }
 
 

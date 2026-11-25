@@ -1,4 +1,5 @@
 import "./hero.js";
+import "./navigation.js"
 import "./contact.js"
 import "./animation.js"
 

@@ -1,6 +1,6 @@
 export function createCategoryCard(category) {
     return `
-        <a href="${category.link}" class="category-card">
+        <a href="${category.link}" class="category-card"  data-animate="fade-up">
             <img
                 src="${category.image}"
                 alt="${category.name}"

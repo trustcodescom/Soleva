@@ -24,5 +24,22 @@ const animationObserver = new IntersectionObserver((entries, observer) => {
 });
 
 animatedElements.forEach(element => {
+
+    // Set animation duration
+    const duration = element.dataset.duration || 800;
+
+    // Set animation delay
+    const delay = element.dataset.delay || 0;
+
+    element.style.setProperty(
+        '--animation-duration',
+        `${duration}ms`
+    );
+
+    element.style.setProperty(
+        '--animation-delay',
+        `${delay}ms`
+    );
+
     animationObserver.observe(element);
 });

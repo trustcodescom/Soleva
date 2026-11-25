@@ -298,6 +298,19 @@
         margin-inline: auto;
     }
 
+    .about-hero-content h1,
+    .contact-hero-content h1 {
+        margin-bottom: .9rem;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+
+    .about-hero-content p,
+    .contact-hero-content p {
+        color: rgba(255, 255, 255, .8);
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
     /* contact-form */
      .contact-form-section {
         display: grid;
@@ -420,7 +433,26 @@
         margin-inline: auto;
     }
 
+
+    /* CONTACT SECTION */
     
+    .contact-hero,
+    .about-hero {
+        height: 300px;
+    }
+    .about-hero-content h1,
+    .contact-hero-content h1 {
+        margin-bottom: .9rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .about-hero-content p,
+    .contact-hero-content p {
+        color: rgba(255, 255, 255, .8);
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
 }
 
 /* Desktop Styles */
@@ -547,15 +579,15 @@
     /* ===== about_us Page ===== */
     .about-hero-content h1,
     .contact-hero-content h1 {
-        margin-bottom: .3rem;
-        font-size: 2.5rem;
+        margin-bottom: .9rem;
+        font-size: 2.7rem;
         font-weight: 500;
     }
 
     .about-hero-content p,
     .contact-hero-content p {
         color: rgba(255, 255, 255, .8);
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         line-height: 1.7;
     }
 
@@ -644,7 +676,8 @@
     }
 
     .contact-form-intro h2 {
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
 
     .contact-form {
